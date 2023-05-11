@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="css/kontakt_styles.css">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+
+    <script src="https://kit.fontawesome.com/7c1106c071.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&display=swap" rel="stylesheet">
+
+    <title>Zeitluft</title>
+</head>
+
+<body>
+
+    <!-- Start Headbereich -->
+
+    <header>
+        <nav id="nav-top">
+            <a class="logo" href="index.html" title="Home">
+                <img src="img/Logo_Quadrat.png" alt="logo">
+            </a>
+            <input type="checkbox" id="nav-top-trigger" name="nav-top-trigger">
+            <label for="nav-top-trigger" class="nav-top-trigger">
+                <em></em>
+            </label>
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="produkte.html">Produkte</a></li>
+                <li><a href="team.html">Unser Team</a></li>
+                <li><a href="#">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Ende Headbereich -->
+
+    <!-- Start zum Formular -->
+
+    <div class="content">
+        <a href="#form"><button>Zum Kontaktformulart</button></a>
+    </div>
+
+    <!-- Ende zum Formular -->
+
+    <!-- Start Kontakt -->
+
+    <div class="contact">
+        <h2>Sie können uns hier erreichen:</h2>
+        <ul>
+            <li>
+                <span class="icon">
+                    <i class="fa-solid fa-phone-flip"></i>
+                </span>
+                0316 12 45 33
+            </li>
+            <li>
+                <span class="icon">
+                    <i class="fa-sharp fa-solid fa-envelope"></i>
+                </span>
+                hallo@zeltluft.at
+            </li>
+            <li>
+                <span class="icon">
+                    <i class="fa-brands fa-twitter"></i>
+                </span>
+                @zeltLuft
+            </li>
+            <li>
+                <span class="icon">
+                    <i class="fa-brands fa-square-facebook"></i>
+                </span>
+                facebook.com/zeltluft
+            </li>
+        </ul>
+    </div>
+
+    <!-- Start Kontakt -->
+   
+    <!-- Start Formular -->
+
+    <div class="formular" id="form">
+        <input class="vor" type="text" placeholder="Vorname" required>
+        <input class="nach" type="text" placeholder="Nachname" required>
+        <input class="mail" type="text" placeholder="E-Mail">
+        <input class="tel" type="text" placeholder="Telefonnummer" required>
+        <textarea class="textarea" placeholder="Ihre Nachricht ..."></textarea>
+        <div class="checked">
+            <input type="checkbox" required>
+            <label>
+                Hier,it bestätige ich, dass die oben angegebenen Daten
+                gemäß Datenschutzrichtlinie für die Abwicklung und für die
+                Kontaktaufnahme zu deren Beantwortung gespeichert und verarbeitet werden.
+                Diese Einwilligung kann jeder Zeit widerrufen werden.
+            </label>
+        </div>
+
+        <input class="senden" type="submit" value="Abschicken">
+    </div>
+
+    <!-- Ende Formular -->
+    
+    <!-- Start Footbereich -->
+
+    <footer>
+        <div class="zeichen"><a href="#">&copy; zeltLuft</a> | <a href="#">Impressum</a></div>
+        <div class="s_mobil">
+            <div class="social"><a href="#"><i class="fa-brands fa-facebook-f"></i></a></div>
+            <div class="social"><a href="#"><i class="fa-brands fa-twitter"></i></a></div>
+            <div class="social"><a href="#"><i class="fa-brands fa-instagram"></i></a></div>
+        </div>
+    </footer>
+
+    <!-- Ende Footbereich -->
+
+</body>
+
+</html>

@@ -1,0 +1,370 @@
+/* Erster Versuch
+
+Es hat einfach nicht funktioniert...
+Habe es deswegen auf eine andere weise gemacht.
+Ist zwar nicht so schön aber zumindestens hat es funktioniert.
+
+.bilder {
+    display: flex;
+    margin-top: 80px;
+    height:700px;
+    width: 100%;
+    align-items: flex-end;
+    background-image: url(../img/pexels-frans-van-heerden-1800387.jpg);
+    background-position: center;
+    background-size: cover;
+    margin-bottom: 0;
+    position: absolute;
+    animation: change2 5s infinite linear;
+}
+.bilder::before {
+    display: flex;
+    margin-top: 80px;
+    height:700px;
+    width: 100%;
+    content: "";
+    align-items: flex-end;
+    background-image: url(../img/unsplash-clay-banks-OcxgtPN0FmM.jpg);
+    background-position: center;
+    background-size: cover;
+    margin-bottom: 0;
+    position: absolute;
+    animation: change1 5s infinite linear;
+}
+.bilder::after {
+    display: flex;
+    margin-top: 80px;
+    height:700px;
+    width: 100%;
+    content: "";
+    align-items: flex-end;
+    background-image: url(../img/unsplash-roberto-nickson-wRF6hCur9A8.jpg);
+    background-position: center;
+    background-size: cover;
+    margin-bottom: 0;
+    position: absolute;
+    animation: change3 5s infinite linear;
+}
+@media screen and (min-width:992px) {
+    .bilder {
+        background-image: url(../img/arwin-basdew-4S6FmLPEP6A-unsplash.jpg);
+        background-position: center;
+        background-size: cover;
+        margin-bottom: 0;
+    }
+    .bilder::before {
+        content: "";
+        background-image: url(../img/andrea-davis-BVQmegLZGGE-unsplash.jpg);
+        background-position: center;
+        background-size: cover;
+        margin-bottom: 0;
+    }
+    .bilder::after {
+        content: "";
+        background-image: url(../img/tiny-house-teewah-7-2-aussie-tiny-houses.jpg.webp);
+        background-position: center;
+        background-size: cover;
+        margin-bottom: 0;
+    }
+}
+*/
+
+/* Mobile Ansicht */
+
+/* Animation Start */
+
+@keyframes change1 {
+    0% {
+        z-index: 20;
+    }
+
+    50% {
+        z-index: 5;
+    }
+
+    100% {
+        z-index: 5;
+    }
+}
+
+@keyframes change2 {
+    0% {
+        z-index: 5;
+    }
+
+    50% {
+        z-index: 20;
+    }
+
+    100% {
+        z-index: 5;
+    }
+}
+
+@keyframes change3 {
+    0% {
+        z-index: 5;
+    }
+
+    50% {
+        z-index: 5;
+    }
+
+    100% {
+        z-index: 20;
+    }
+}
+
+.one {
+    animation: change1 5s infinite linear;
+}
+
+.two {
+    animation: change2 5s infinite linear;
+}
+
+.three {
+    animation: change3 5s infinite linear;
+}
+
+/* Anmation Ende */
+
+.wechsel {
+    display: flex;
+    margin-top: 80px;
+    height: 700px;
+    width: 100%;
+}
+
+.bilder {
+    width: 100%;
+    height: 700px;
+    position: absolute;
+}
+
+.four,
+.five,
+.six {
+    opacity: 0;
+}
+
+img {
+    width: 100%;
+}
+
+h1 {
+    padding: 20px;
+    background-color: rgba($color: #2b534d, $alpha: 0.66);
+    color: white;
+    width: 100%;
+    text-align: right;
+    align-self: flex-end;
+    position: absolute;
+    z-index: 50;
+}
+h2 {
+    color: white;
+    background-color: #716f6a;
+    padding: 40px;
+}
+h3 {
+    background-color: #3d766d;
+    color: white;
+    padding: 10px;
+}
+.planung {
+    h4 {
+        color: #3d766d;
+        padding: 5px;
+    }
+    p {
+        font-size: smaller;
+        padding: 5px;
+    }
+    a {
+        text-decoration: none;
+    }
+}
+.notice {
+    color: #716f6a;
+    font-size: 8pt;
+}
+.icon_1,
+    .icon_2,
+    .icon_3,
+    .icon_4,
+    .icon_5 {
+        font-size: 40px;
+        padding: 25px;
+        border: 3px solid #2b534d;
+        background-color: #3d766d;
+        border-radius: 1000px;
+        color: white;
+        margin-top: 5%;
+        margin-left: 35%;
+        margin-right: 35%;
+        margin-bottom: 2%;
+    }
+
+/* Desktop Ansicht */
+
+@media screen and (min-width:992px) {
+
+    /* Anmation Start */
+
+    .four {
+        animation: change1 5s infinite linear;
+    }
+
+    .five {
+        animation: change2 5s infinite linear;
+    }
+
+    .six {
+        animation: change3 5s infinite linear;
+    }
+
+    .four,
+    .five,
+    .six {
+        opacity: 1;
+    }
+
+    .one,
+    .two,
+    .three {
+        opacity: 0;
+    }
+
+    /* Anmation Start */
+
+    h2{
+        margin-bottom: 20px;
+    }
+    h3 {
+        color: #3d766d;
+        background-color: transparent;
+    }
+    .angebote {
+        display: grid;
+        gap: 10px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        align-items: center;
+
+        p {
+            justify-self: center;
+        }
+    }
+
+    .b_design {
+        border: 2px solid#2b534d;
+    }
+
+    .a_bild_1 {
+        grid-column: 1;
+        grid-row: 1;
+        border-top-right-radius: 75px;
+        border-bottom-right-radius: 75px;
+    }
+
+    .a_text_1 {
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    .a_bild_2 {
+        grid-column: 2;
+        grid-row: 2;
+        border-top-left-radius: 75px;
+        border-bottom-left-radius: 75px;
+        justify-self: end;
+    }
+
+    .a_text_2 {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .a_bild_3 {
+        grid-column: 1;
+        grid-row: 3;
+        border-top-right-radius: 75px;
+        border-bottom-right-radius: 75px;
+    }
+
+    .a_text_3 {
+        grid-column: 2;
+        grid-row: 3;
+    }
+
+    .a_text_1,
+    .a_text_2,
+    .a_text_3 {
+        padding: 5%;
+    }
+
+    .planung {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-areas:
+            "stufe1 stufe1 stufe2 stufe2 stufe3 stufe3"
+            "s_text1 s_text1 s_text2 s_text2 s_text3 s_text3"
+            ". stufe4 stufe4 stufe5 stufe5 ."
+            ".s_text4 s_text4 s_text5 s_text5 .";
+        gap: 15px;
+    }
+
+    .icon_1 {
+        grid-area: stufe1;
+    }
+
+    .icon_2 {
+        grid-area: stufe2;
+    }
+
+    .icon_3 {
+        grid-area: stufe3;
+    }
+
+    .icon_4 {
+        grid-area: stufe4;
+    }
+
+    .icon_5 {
+        grid-area: stufe5;
+    }
+
+    .angabe1 {
+        grid-area: s_text1;
+    }
+
+    .angabe2 {
+        grid-area: s_text2;
+    }
+
+    .angabe3 {
+        grid-area: s_text3;
+    }
+
+    .angabe4 {
+        grid-area: s_text4;
+    }
+
+    .angabe5 {
+        grid-area: s_text5;
+    }
+
+    .icon_1,
+    .icon_2,
+    .icon_3,
+    .icon_4,
+    .icon_5 {
+        font-size: 80px;
+        padding: 50px;
+        margin: 0;
+        justify-self: center;
+        align-self: center;
+    }
+}

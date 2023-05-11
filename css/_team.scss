@@ -1,0 +1,150 @@
+
+/* Mobile Ansicht */
+
+.hue {
+    height: 100%;
+    background-color: rgba($color: #2b534d, $alpha: 0.50);
+
+    h1 {
+        color: white;
+        padding: 80px;
+    }
+
+    .ueber {
+        color: transparent;
+        font-size: 5px;
+    }
+}
+.text {
+    text-align: center;
+}
+.picture {
+    margin-top: 80px;
+    height: 50%;
+    background-image: url(../img/tiny-home-adria-hero.jpg);
+    background-position: center;
+    background-size: cover;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.bild {
+    width: 100%;
+}
+
+h3 {
+    text-align: center;
+    color: white;
+    background-color: #716f6a;
+    padding: 20px;
+}
+
+/* Desktop Ansicht */
+
+@media screen and (min-width:992px) {
+    .hue {
+        .ueber {
+            color: white;
+            font-size: 12pt;
+            padding: 20px;
+            padding-bottom: 80px;
+            margin-top: -100px;
+            margin-left: 15%;
+            margin-right: 15%;
+        }
+    }
+
+    .team {
+        margin-top: 5%;
+        margin-bottom: 5%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        gap: 15px;
+        align-items: center;
+    }
+
+    .text {
+        width: 80%;
+        background-color: rgba($color: #2b534d, $alpha: 0.33);
+        border: 1px solid #2b534d;
+        border-radius: 25px;
+        margin: 10px;
+
+        p {
+            padding: 15px;
+        }
+
+        h3 {
+            background-color: #2b534d;
+            border-top-right-radius: 25px;
+            border-top-left-radius: 25px;
+        }
+    }
+
+    .bild {
+        width: 300px;
+        height: 300px;
+        border-radius: 1000px;
+        box-shadow: 0px 0px 15px 10px rgba(43, 83, 77, 0.60);
+        -webkit-box-shadow: 0px 0px 15px 10px rgba(43, 83, 77, 0.60);
+        -moz-box-shadow: 0px 0px 15px 10px rgba(43, 83, 77, 0.60);
+    }
+
+    .lucas_left {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .lucas_right {
+        grid-column: 2 /span 2;
+        grid-row: 1;
+    }
+
+    .marina_left {
+        grid-column: 1 /span 2;
+        grid-row: 2;
+    }
+
+    .marina_right {
+        grid-column: 3;
+        grid-row: 2;
+    }
+
+    .jen_left {
+        grid-column: 1;
+        grid-row: 3;
+    }
+
+    .jen_right {
+        grid-column: 2 /span 2;
+        grid-row: 3;
+    }
+
+    .lisa_left {
+        grid-column: 1 /span 2;
+        grid-row: 4;
+    }
+
+    .lisa_right {
+        grid-column: 3;
+        grid-row: 4;
+    }
+
+    .lucas_left,
+    .jen_left {
+        justify-self: end;
+    }
+
+    .marina_right,
+    .lisa_right {
+        justify-self: start;
+    }
+
+    .lucas_right,
+    .marina_left,
+    .jen_right,
+    .lisa_left {
+        justify-self: center;
+    }
+}
